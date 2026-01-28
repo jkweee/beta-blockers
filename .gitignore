@@ -1,2 +1,4 @@
 venv/*
 input_files.txt
+input_files/*.mp4
+*-combined-highquality.mp4

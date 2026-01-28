@@ -1,12 +1,21 @@
 # Usage
 
-1. List input files in `input_files.txt`
-2. Set output file in `append_sets.sh`
-3. Create a new screen instance: `screen -S beta-blockers`
+1. Place video files in the `input_files/` directory
+2. Create a new screen instance: `screen -S beta-blockers`
     - _Ensure that you are in the_ `preprocess-append` _folder_!
-4. Run script: `source append_sets.sh`
+3. Run script: `source append_sets.sh`
+    - The script will display all files to be concatenated
+    - It will propose a default output filename: `YYYY-MM-DD-combined-highquality.mp4` (using today's date)
+    - Confirm with Y/N or enter a custom filename
     - At this point, it's safe to close the terminal and exit the IDE
-5. Come back in the morning and reattach and exit: `screen -r beta-blockers`
+4. Come back in the morning and reattach and exit: `screen -r beta-blockers`
+
+### Recent Changes (28/01/2026)
+
+- Script now automatically generates `input_files.txt` from files in `input_files/` directory
+- Displays file list before processing for verification
+- Interactive output filename selection with date-based default
+- Uncommented ffmpeg command (ready to use)
 
 ### Notes
 

@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# Redirect all output to append_sets.log and terminal
+exec > >(tee -a append_sets.log) 2>&1
+
 # Ensures we are in the correct directory
 pwd
 

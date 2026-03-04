@@ -28,7 +28,7 @@ echo "Output filename will be: $default_output"
 read -p "Is this OK? (Y/N): " confirm
 
 if [[ $confirm != [Yy]* ]]; then
-    read -p "Enter the desired output filename: " custom_output
+    read -e -i "$default_output" -p "Enter the desired output filename: " custom_output
     output_file="$custom_output"
 else
     output_file="$default_output"
